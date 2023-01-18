@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Banner } from 'src/app/model/banner';
@@ -23,6 +23,7 @@ export class ModalcambiarComponent implements OnInit {
     carouselimagen: "",
     imageprincipal: ""
   };
+  @Output() actualizarComponente = new EventEmitter<any>();
 
   constructor(
     private formBuilder: FormBuilder,
@@ -82,7 +83,7 @@ export class ModalcambiarComponent implements OnInit {
         alert("Error en la modificacion, intentelo nuevanente");
         this.router.navigate(['/dashboard']);
         //document.getElementById('cerrarModalEdicionBanner').click();
-
+        this.actualizarComponente.emit();
         //alert("la informacion fue modificada");
         //$("exampleModal12").modal("hide");
         //modalService.close('exampleModal12');
@@ -90,6 +91,7 @@ export class ModalcambiarComponent implements OnInit {
         alert("la informacion fue modificada");
         //alert("Error en la modificacion, intentelo nuevanente");
         this.router.navigate(['/dashboard']);
+        this.actualizarComponente.emit();
         document.getElementById('cerrarModalEdicionBanner').click();
       }
     )

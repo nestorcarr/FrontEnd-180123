@@ -15,7 +15,7 @@ export class ModaleditardashComponent implements OnInit {
   //perso: Persona = {id: 1, nombre: "", apellido: "", profesion: "", acerca_de_mi: "", acercademi: "", imageprincipal: ""};
   //personaId: number = 1; //Inicializo en  id fijo = 1 porque solo habra 1 persona
   //id: number = 1; //le pongo id fijo porque solo tendre 1 info personal
-  @Output() actualizarComponente  = new EventEmitter<any>;
+  @Output() actualizarComponente  = new EventEmitter<any>();
   @Input() editarPersona : Persona = {
     id: 0,
     nombre: "",
