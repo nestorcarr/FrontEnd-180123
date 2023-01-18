@@ -95,7 +95,6 @@ export class ModaleditarComponent implements OnInit {
         alert("Error en la modificacion, intentelo nuevanente");
         this.router.navigate(['/dashboard']);
         //document.getElementById('cerrarModalEdicionBanner').click();
-        window.location.reload();
 
         //alert("la informacion fue modificada");
         //$("exampleModal12").modal("hide");
@@ -105,7 +104,6 @@ export class ModaleditarComponent implements OnInit {
         //alert("Error en la modificacion, intentelo nuevanente");
         this.router.navigate(['/dashboard']);
         document.getElementById('modalEdicionBanner1').click();
-        window.location.reload();
       }
     )
 
