@@ -9,7 +9,7 @@
     <form [formGroup]="form" (ngSubmit)="onEnviar($event)" name="experiencialaboralForm">
       <div class="modal-body letra">
           <div class="">
-            <input type="text" formControlName="logo" class="form-control border mb-2" id="logoempresa" placeholder="Logoempresa" [(ngModel)]="logo" [ngClass]="{'is-invalid': Logo?.errors && Logo?.touched, 'is-valid': !Logo?.errors && Logo?.touched}" >
+            <input type="text" formControlName="logo" class="form-control border mb-2" id="logoempresa" placeholder="Logoempresa" [ngClass]="{'is-invalid': Logo?.errors && Logo?.touched, 'is-valid': !Logo?.errors && Logo?.touched}" >
             <label for="logoempresa" class="form-label">Logo Empresa</label>
             <p class="help-block py-3"></p>
             <div *ngIf="Logo?.errors && Logo?.touched">
@@ -19,7 +19,7 @@
             </div>
           </div>
           <div class="form-floating">
-            <input type="text" formControlName="empresa"class="form-control border mb-2" id="laboralEmpresa" placeholder="Empresa" [(ngModel)]="empresa" [ngClass]="{'is-invalid': Empresa?.errors && Empresa?.touched, 'is-valid': !Empresa?.errors && Empresa?.touched}">
+            <input type="text" formControlName="empresa"class="form-control border mb-2" id="laboralEmpresa" placeholder="Empresa" [ngClass]="{'is-invalid': Empresa?.errors && Empresa?.touched, 'is-valid': !Empresa?.errors && Empresa?.touched}">
             <label for="laboralEmpresa" class="form-label">Empresa</label>
             <div *ngIf="Empresa?.errors && Empresa?.touched">
               <p *ngIf="Empresa?.hasError('required')" class="text-danger">
@@ -29,7 +29,7 @@
 
           </div>
           <div class="form-floating">
-            <input type="text" formControlName="cargo" class="form-control border mb-2" id="floatingPassword22" placeholder="Puesto" [(ngModel)]="cargo" [ngClass]="{'is-invalid': Cargo?.errors && Cargo?.touched, 'is-valid': !Cargo?.errors && Cargo?.touched}">
+            <input type="text" formControlName="cargo" class="form-control border mb-2" id="floatingPassword22" placeholder="Puesto" [ngClass]="{'is-invalid': Cargo?.errors && Cargo?.touched, 'is-valid': !Cargo?.errors && Cargo?.touched}">
             <label for="floatingPassword22" class="form-label">Cargo</label>
             <div *ngIf="Cargo?.errors && Cargo?.touched">
               <p *ngIf="Cargo?.hasError('required')" class="text-danger">
@@ -39,7 +39,7 @@
 
           </div>
           <div class="form-floating">
-            <input type="text" formControlName="inicio" class="form-control border mb-2" id="floatingPassword222" placeholder="Año de Inicio" [(ngModel)]="inicio" [ngClass]="{'is-invalid': Inicio?.errors && Inicio?.touched, 'is-valid': !Inicio?.errors && Inicio?.touched}">
+            <input type="text" formControlName="inicio" class="form-control border mb-2" id="floatingPassword222" placeholder="Año de Inicio" [ngClass]="{'is-invalid': Inicio?.errors && Inicio?.touched, 'is-valid': !Inicio?.errors && Inicio?.touched}">
             <label for="floatingPassword222" class="form-label">Año de Inicio</label>
             <div *ngIf="Inicio?.errors && Inicio?.touched">
               <p *ngIf="Inicio?.hasError('required')" class="text-danger">
@@ -49,7 +49,7 @@
 
           </div>
           <div class="form-floating">
-            <input type="text" formControlName="finalizacion" class="form-control border mb-2" id="floatingPassword2222" placeholder="Año de Finalización" [(ngModel)]="finalizacion" [ngClass]="{'is-invalid': Finalizacion?.errors && Finalizacion?.touched, 'is-valid': !Finalizacion?.errors && Finalizacion?.touched}">
+            <input type="text" formControlName="finalizacion" class="form-control border mb-2" id="floatingPassword2222" placeholder="Año de Finalización" [ngClass]="{'is-invalid': Finalizacion?.errors && Finalizacion?.touched, 'is-valid': !Finalizacion?.errors && Finalizacion?.touched}">
             <label for="floatingPassword2222" class="form-label">Año de Finalización</label>
             <div *ngIf="Finalizacion?.errors && Finalizacion?.touched">
               <p *ngIf="Finalizacion?.hasError('required')" class="text-danger">
@@ -60,7 +60,7 @@
           </div>
 
           <div class="mb-3">
-            <textarea formControlName="tareas" class="form-control border mb-2" id="exampleFormControlTextarea12" rows="3" placeholder="Tareas Desempeñadas" [(ngModel)]="tareas" [ngClass]="{'is-invalid': Tareas?.errors && Tareas?.touched, 'is-valid': !Tareas?.errors && Tareas?.touched}">
+            <textarea formControlName="tareas" class="form-control border mb-2" id="exampleFormControlTextarea12" rows="3" placeholder="Tareas Desempeñadas" [ngClass]="{'is-invalid': Tareas?.errors && Tareas?.touched, 'is-valid': !Tareas?.errors && Tareas?.touched}">
               <label for="exampleFormControlTextarea1" class="form-label"></label>
               <div *ngIf="Tareas?.errors && Tareas?.touched">
                 <p *ngIf="Tareas?.hasError('required')" class="text-danger">

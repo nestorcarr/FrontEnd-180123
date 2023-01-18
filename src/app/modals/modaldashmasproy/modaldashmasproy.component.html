@@ -9,12 +9,12 @@
         <form [formGroup]="form" (ngSubmit)="onEnviar($event)" name="proyectosForm">
           <div class="modal-body letra">
                 <div class="">
-                  <input type="text" id="logoproyecto" formControlName="logoproyecto" class="form-control border mb-2" placeholder="Logoproyecto" [(ngModel)]="logoproyecto" [ngClass]="{'is-invalid': Logoproyecto?.errors && Logoproyecto?.touched, 'is-valid': !Logoproyecto?.errors && Logoproyecto?.touched}">
+                  <input type="text" id="logoproyecto" formControlName="logoproyecto" class="form-control border mb-2" placeholder="Logoproyecto" [ngClass]="{'is-invalid': Logoproyecto?.errors && Logoproyecto?.touched, 'is-valid': !Logoproyecto?.errors && Logoproyecto?.touched}">
                   <label for="logoproyecto"class="form-label">Logo del Proyecto</label>
                   <p class="help-block py-3"></p>
                 </div>
                     <div class="form-floating">
-                      <input type="text" formControlName="institucion" class="form-control border mb-2" id="institucion" placeholder="Institución" [(ngModel)]="institucion" [ngClass]="{'is-invalid': Institucion?.errors && Institucion?.touched, 'is-valid': !Institucion?.errors && Institucion?.touched}">
+                      <input type="text" formControlName="institucion" class="form-control border mb-2" id="institucion" placeholder="Institución" [ngClass]="{'is-invalid': Institucion?.errors && Institucion?.touched, 'is-valid': !Institucion?.errors && Institucion?.touched}">
                       <label for="institucion" class="form-label">Institución</label>
                       <div *ngIf="Institucion?.errors && Institucion?.touched">
                         <p *ngIf="Institucion?.hasError('required')" class="text-danger">
@@ -23,7 +23,7 @@
                       </div>
                     </div>
                     <div class="form-floating">
-                      <input type="text" formControlName="proyecto" class="form-control border mb-2" id="proyecto" placeholder="Proyecto" [(ngModel)]="proyecto" [ngClass]="{'is-invalid': Proyecto?.errors && Proyecto?.touched, 'is-valid': !Proyecto?.errors && Proyecto?.touched}">
+                      <input type="text" formControlName="proyecto" class="form-control border mb-2" id="proyecto" placeholder="Proyecto" [ngClass]="{'is-invalid': Proyecto?.errors && Proyecto?.touched, 'is-valid': !Proyecto?.errors && Proyecto?.touched}">
                        <label for="proyecto" class="form-label">Proyecto</label>
                       <div *ngIf="Proyecto?.errors && Proyecto?.touched">
                         <p *ngIf="Proyecto?.hasError('required')" class="text-danger">
@@ -32,7 +32,7 @@
                       </div>
                     </div>
                     <div class="form-floating">
-                      <input type="text" formControlName="profesion" class="form-control border mb-2" id="profesion" placeholder="Profesion" [(ngModel)]="profesion" [ngClass]="{'is-invalid': Profesion?.errors && Profesion?.touched, 'is-valid': !Profesion?.errors && Profesion?.touched}">
+                      <input type="text" formControlName="profesion" class="form-control border mb-2" id="profesion" placeholder="Profesion" [ngClass]="{'is-invalid': Profesion?.errors && Profesion?.touched, 'is-valid': !Profesion?.errors && Profesion?.touched}">
                       <label for="profesion" class="form-label">Profesion</label>
                       <div *ngIf="Profesion?.errors && Profesion?.touched">
                         <p *ngIf="Profesion?.hasError('required')" class="text-danger">
@@ -41,7 +41,7 @@
                       </div>
                     </div>
                     <div class="form-floating">
-                      <input type="text" formControlName="anio" class="form-control border mb-2" id="anio" placeholder="Año" [(ngModel)]="anio" [ngClass]="{'is-invalid': Anio?.errors && Anio?.touched, 'is-valid': !Anio?.errors && Anio?.touched}">
+                      <input type="text" formControlName="anio" class="form-control border mb-2" id="anio" placeholder="Año" [ngClass]="{'is-invalid': Anio?.errors && Anio?.touched, 'is-valid': !Anio?.errors && Anio?.touched}">
                       <label for="anio" class="form-label">Año</label>
                       <div *ngIf="Anio?.errors && Anio?.touched">
                         <p *ngIf="Anio?.hasError('required')" class="text-danger">
@@ -50,7 +50,7 @@
                       </div>
                     </div>
                     <div class="form-floating">
-                      <input type="text" formControlName="estado" class="form-control border mb-2" id="estado" placeholder="Estado"[(ngModel)]="estado" [ngClass]="{'is-invalid': Estado?.errors && Estado?.touched, 'is-valid': !Estado?.errors && Estado?.touched}">
+                      <input type="text" formControlName="estado" class="form-control border mb-2" id="estado" placeholder="Estado" [ngClass]="{'is-invalid': Estado?.errors && Estado?.touched, 'is-valid': !Estado?.errors && Estado?.touched}">
                       <label for="estado" class="form-label">Estado</label>
                       <div *ngIf="Estado?.errors && Estado?.touched">
                         <p *ngIf="Estado?.hasError('required')" class="text-danger">
@@ -60,7 +60,7 @@
                     </div>
 
                     <div class="mb-3">
-                      <textarea formControlName="tema" class="form-control border mb-2" id="tema" rows="3" placeholder="Tema"[(ngModel)]="tema" [ngClass]="{'is-invalid': Tema?.errors && Tema?.touched, 'is-valid': !Tema?.errors && Tema?.touched}">
+                      <textarea formControlName="tema" class="form-control border mb-2" id="tema" rows="3" placeholder="Tema" [ngClass]="{'is-invalid': Tema?.errors && Tema?.touched, 'is-valid': !Tema?.errors && Tema?.touched}">
                         <label for="tema" class="form-label"></label>
                         <div *ngIf="Tema?.errors && Tema?.touched">
                           <p *ngIf="Tema?.hasError('required')" class="text-danger">
@@ -70,7 +70,7 @@
                       </textarea>
                     </div>
                     <div class="mb-3">
-                      <textarea formControlName="temauno" class="form-control border mb-2" id="temauno" rows="3" placeholder="Temauno"[(ngModel)]="temauno" [ngClass]="{'is-invalid': Temauno?.errors && Temauno?.touched, 'is-valid': !Temauno?.errors && Temauno?.touched}"><!--style='width: 10rem;'-->
+                      <textarea formControlName="temauno" class="form-control border mb-2" id="temauno" rows="3" placeholder="Temauno" [ngClass]="{'is-invalid': Temauno?.errors && Temauno?.touched, 'is-valid': !Temauno?.errors && Temauno?.touched}"><!--style='width: 10rem;'-->
                         <label for="temauno" class="form-label" ></label>
                         <div *ngIf="Temauno?.errors && Temauno?.touched">
                           <p *ngIf="Temauno?.hasError('required')" class="text-danger">

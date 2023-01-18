@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 
 const TOKEN_KEY = 'AuthToken';
 const USERNAME_KEY = 'AuthUsername';
-const AUTHORITIES_KEY = 'AuthAuthorities';
+const AUTHORITIES_KEY : string | undefined = 'AuthAuthorities';
 
 
 @Injectable({
@@ -40,8 +40,9 @@ export class TokenService {
 
   public getAuthorities(): string[]{
     this.roles = [];
-    if(sessionStorage.getItem(AUTHORITIES_KEY)){
-      JSON.parse(sessionStorage.getItem(AUTHORITIES_KEY)!).forEach((authority:any) => {
+    let authorities : string | undefined = sessionStorage.getItem(AUTHORITIES_KEY);
+    if(authorities !== "undefined"){
+      JSON.parse(sessionStorage.getItem(AUTHORITIES_KEY)).forEach((authority:any) => {
         this.roles.push(authority.authority);
       });
     }

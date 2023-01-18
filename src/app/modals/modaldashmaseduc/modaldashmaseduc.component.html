@@ -9,7 +9,7 @@
       <form [formGroup]="form" (ngSubmit)="onEnviar($event)" name="educacionForm">
       <div class="modal-body letra">
           <div class="form-group">
-            <input type="text" formControlName="logo" class="form-control border mb-2" id="logo" placeholder="Logo" [(ngModel)]="logo" [ngClass]="{'is-invalid': Logo?.errors && Logo?.touched, 'is-valid': !Logo?.errors && Logo?.touched}">
+            <input type="text" formControlName="logo" class="form-control border mb-2" id="logo" placeholder="Logo" [ngClass]="{'is-invalid': Logo?.errors && Logo?.touched, 'is-valid': !Logo?.errors && Logo?.touched}">
             <label for="logo" class="form-label">Logo de Institucion</label>
             <p class="help-block py-3"></p>
             <div *ngIf="Logo?.errors && Logo?.touched">
@@ -19,7 +19,7 @@
             </div>
           </div>
           <div class="form-floating">
-            <input type="text" formControlName="universidad" class="form-control border mb-2" id="universidad" placeholder="Universidad" [(ngModel)]="universidad" [ngClass]="{'is-invalid': Universidad?.errors && Universidad?.touched, 'is-valid': !Universidad?.errors && Universidad?.touched}">
+            <input type="text" formControlName="universidad" class="form-control border mb-2" id="universidad" placeholder="Universidad"  [ngClass]="{'is-invalid': Universidad?.errors && Universidad?.touched, 'is-valid': !Universidad?.errors && Universidad?.touched}">
             <label for="universidad" class="form-label">Universidad</label>
             <div *ngIf="Universidad?.errors && Universidad?.touched">
               <p *ngIf="Universidad?.hasError('required')" class="text-danger">
@@ -28,7 +28,7 @@
             </div>
           </div>
           <div class="form-floating">
-            <input type="text" formControlName="institucion" class="form-control border mb-2" id="institucion" placeholder="Institución" [(ngModel)]="institucion" [ngClass]="{'is-invalid': Institucion?.errors && Institucion?.touched, 'is-valid': !Institucion?.errors && Institucion?.touched}">
+            <input type="text" formControlName="institucion" class="form-control border mb-2" id="institucion" placeholder="Institución" [ngClass]="{'is-invalid': Institucion?.errors && Institucion?.touched, 'is-valid': !Institucion?.errors && Institucion?.touched}">
             <label for="institucion" class="form-label">Institución</label>
             <div *ngIf="Institucion?.errors && Institucion?.touched">
               <p *ngIf="Institucion?.hasError('required')" class="text-danger">
@@ -37,7 +37,7 @@
             </div>
           </div>
           <div class="form-floating">
-            <input type="text" formControlName="titulo" class="form-control border" id="titulo" placeholder="Título" [(ngModel)]="titulo" [ngClass]="{'is-invalid': Titulo?.errors && Titulo?.touched, 'is-valid': !Titulo?.errors && Titulo?.touched}">
+            <input type="text" formControlName="titulo" class="form-control border" id="titulo" placeholder="Título" [ngClass]="{'is-invalid': Titulo?.errors && Titulo?.touched, 'is-valid': !Titulo?.errors && Titulo?.touched}">
             <label for="titulo" class="form-label">Título</label>
             <div *ngIf="Titulo?.errors && Titulo?.touched">
               <p *ngIf="Titulo?.hasError('required')" class="text-danger">
@@ -46,7 +46,7 @@
             </div>
           </div>
           <div class="form-floating mt-2">
-            <input type="text" formControlName="estado" class="form-control border" id="estado" placeholder="Estado" [(ngModel)]="estado" [ngClass]="{'is-invalid': Estado?.errors && Estado?.touched, 'is-valid': !Estado?.errors && Estado?.touched}">
+            <input type="text" formControlName="estado" class="form-control border" id="estado" placeholder="Estado" [ngClass]="{'is-invalid': Estado?.errors && Estado?.touched, 'is-valid': !Estado?.errors && Estado?.touched}">
             <label for="estado" class="form-label">Estado</label>
             <div *ngIf="Estado?.errors && Estado?.touched">
               <p *ngIf="Estado?.hasError('required')" class="text-danger">
