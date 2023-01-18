@@ -28,7 +28,7 @@ export class GuardGuard implements CanActivate {
 
 
   let currentUser = this.authService.usuarioAutenticado;
-    if (currentUser && currentUser.id){
+    if (currentUser && currentUser.id && this.tokenService.getAuthorities().includes("ROLE_ADMIN")){
       return true;
   } else{
     this.route.navigate(['/index']);     // ///////
