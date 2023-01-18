@@ -83,7 +83,7 @@ ngOnInit(): void {
          this.isLogginFail = false;
          this.tokenService.setToken(data.accessToken);
          this.tokenService.setUserName(data.username);
-         this.tokenService.setAuthorities(data.authorities);
+         this.tokenService.setAuthorities(data.roles);
          document.getElementById("cerrarModal666")?.click();
          this.roles = data.authorities;
          this.router.navigate(['/dashboard']);

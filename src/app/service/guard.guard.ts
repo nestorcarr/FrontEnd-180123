@@ -8,17 +8,12 @@ import { TokenService } from './token.service';
   providedIn: 'root'
 })
 export class GuardGuard implements CanActivate {
-  //accessToken: string = "";
-  //username: string = "";
 
   constructor (private tokenService: TokenService,
     private route: Router,
     private authService: AuthService
     ){
-     /* this.authService.currentUser.subscribe(data=>{
-        this.accessToken = data.accessToken;
-        this.username = data.user;
-      });*/
+     
     }
 
 
@@ -28,7 +23,7 @@ export class GuardGuard implements CanActivate {
 
 
   let currentUser = this.authService.usuarioAutenticado;
-    if (currentUser && currentUser.id && this.tokenService.getAuthorities().includes("ROLE_ADMIN")){
+    if (currentUser && currentUser.id && currentUser.roles.includes('ROLE_ADMIN')){
       return true;
   } else{
     this.route.navigate(['/index']);     // ///////

@@ -40,8 +40,7 @@ export class TokenService {
 
   public getAuthorities(): string[]{
     this.roles = [];
-    let authorities : string | undefined = sessionStorage.getItem(AUTHORITIES_KEY);
-    if(authorities !== "undefined"){
+    if(sessionStorage.getItem(AUTHORITIES_KEY) !== null){
       JSON.parse(sessionStorage.getItem(AUTHORITIES_KEY)).forEach((authority:any) => {
         this.roles.push(authority.authority);
       });
