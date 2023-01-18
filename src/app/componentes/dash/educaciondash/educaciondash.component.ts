@@ -44,14 +44,11 @@ educacion : Educacion = {
   }
 
   actualizarComponente(event : Event){
-    console.log("estoy mandando algo a mi padre");
     this.cargarEducacion();
   }
 
   actualizarVariable(edu: Educacion): void{
     this.educacion =  edu;
-    console.log("Funciona?");
-    console.log(edu);
   }
 
   delete(id: number){

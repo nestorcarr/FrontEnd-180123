@@ -28,11 +28,8 @@ export class ModaldashedicionproyComponent implements OnInit {
     estado: ""
 
   };
-  //proyectos: Proyecto = null;
-  //personaId: number = 1;          //le pongo id fijo porque solo tendre 1 persona
-  //id: number = 0;
 
-
+  ngOnInit() : void {}
    //Inyectar en el constructor el formBuilder
   constructor(
     private formBuilder: FormBuilder,
@@ -41,18 +38,6 @@ export class ModaldashedicionproyComponent implements OnInit {
     private router: Router
   ) {
     this.form=this.formBuilder.group({
-     /*   //id:[''],
-        institucion: [''],
-        proyecto: [''],
-        profesion: [''],
-        logoproyecto: [''],
-        tema: [''],
-        temauno: [''],
-        anio: [''],
-        estado: [''],
-
-    })*/
-
       id:[''],
       institucion: ['', [Validators.required]],
       proyecto: ['', [Validators.required]],
@@ -67,52 +52,7 @@ export class ModaldashedicionproyComponent implements OnInit {
 
   }
 
-  /*ngOnInit(): void {
-    this.cargarInfo();
-    const id = this.activatedRoute.snapshot.params['id'];
-    this.sProyecto.getById(this.id).subscribe(
-      data => {
-        this.proye = data;
-      }, () =>{
-
-      })
-  }*/
-  ngOnInit(): void {
-    /**/
-  }
-
-/*
-  ngOnInit(): void {
-    this.cargarInfo();
-    const id = this.activatedRoute.snapshot.params['id'];
-    this.sProyecto.getById(this.id).subscribe(
-      data => {
-        this.proye = data;//proyectos
-      }, () =>{
-
-      }
-    )
-  }*/
-
-/*
-  ngOnInit(): void{
-    this.form=this.formBuilder.group({
-      //id:[''],
-      institucion: ['', [Validators.required]],
-      proyecto: ['', [Validators.required]],
-      profesion: ['', [Validators.required]],
-      logoproyecto: ['', [Validators.required]],
-      tema: ['', [Validators.required]],
-      temauno: ['', [Validators.required]],
-      anio: ['', [Validators.required]],
-      estado: ['', [Validators.required]],
-
-  })
-
-  }*/
-
   ngOnChanges(): void {
-      console.log(this.editarProyecto);
       this.form.controls['id']?.setValue(this.editarProyecto.id);
       this.form.controls['institucion']?.setValue(this.editarProyecto.institucion);
       this.form.controls['proyecto']?.setValue(this.editarProyecto.proyecto);
@@ -148,48 +88,8 @@ export class ModaldashedicionproyComponent implements OnInit {
   get Estado(){
     return this.form.get('estado');
   }
-/*
-  onUpdate(): void{
-    const id = this.activatedRoute.snapshot.params['id'];
-    this.sProyecto.editProyecto(this.id, this.proye).subscribe(
-      data => {
-        alert("la informacion fue modificada");
-        window.location.reload();
-      }, err =>{
-        alert("error");
-        this.router.navigate(['']);
-      }
-    )
-
-
-  }*/
-  /*
-  onUpdate(): void{
-    const id = this.activatedRoute.snapshot.params['id'];//proyectos
-    this.sProyecto.editProyecto(this.id, this.proye).subscribe(
-      data => {
-        alert("la informacion fue modificada");
-        window.location.reload();
-      }, err =>{
-        alert("error");
-        window.location.reload();
-      }
-    )
-  }
-  */
 
   onUpdate(): void{
-    //const id = this.activatedRoute.snapshot.params['id'];
-    //this.proye.id = this.editarProyecto.id;
-    //this.proye.institucion = this.form.get('institucion').value;
-    //this.proye.proyecto = this.form.get('proyecto').value;
-    //this.proye.profesion = this.form.get('profesion').value;
-    //this.proye.logoproyecto = this.form.get('logoproyecto').value;
-    //this.proye.tema = this.form.get('tema').value;
-    //this.proye.anio = this.form.get('anio').value;
-    //this.proye.temauno = this.form.get('temauno').value;
-    //this.proye.estado = this.form.get('estado').value;
-    console.log(this.form.value);
     this.sProyecto.save(this.form.value).subscribe(
       data => {
         //alert("error");
@@ -198,30 +98,16 @@ export class ModaldashedicionproyComponent implements OnInit {
         alert("Error en la modificacion, intentelo nuevanente");
         this.actualizarComponente.emit();
         this.router.navigate(['/dashboard']);
-        //window.location.reload();
-        //alert("la informacion fue modificada");
-        //$("exampleModal12").modal("hide");
-        //modalService.close('exampleModal12');
         }, err =>{
         alert("la informacion fue modificada");
-        //alert("Error en la modificacion, intentelo nuevanente");
         this.router.navigate(['/dashboard']);
         this.actualizarComponente.emit();
         document.getElementById('cerrarModalEdicionProyecto').click();
-        //window.location.reload();
       }
     )
 
 
   }
-
-//metodo para traer la info de la ddbb
- /* cargarInfo(){
-    this.sProyecto.getById(this.id).subscribe(data => {
-      this.proye = data;//proyectos
-    });
-  }
-*/
   limpiar(): void {
     this.form.reset();
   }

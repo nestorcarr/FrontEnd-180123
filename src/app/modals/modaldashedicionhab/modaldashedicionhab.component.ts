@@ -43,7 +43,6 @@ export class ModaldashedicionhabComponent implements OnInit {
   }
 
   ngOnChanges(): void {
-      console.log(this.editarHabilidad);
       this.form.controls['id']?.setValue(this.editarHabilidad.id);
       this.form.controls['habilidad']?.setValue(this.editarHabilidad.habilidad);
       this.form.controls['porcentaje']?.setValue(this.editarHabilidad.porcentaje);
@@ -61,7 +60,6 @@ export class ModaldashedicionhabComponent implements OnInit {
   }
 
   onUpdate(): void{
-    console.log(this.form.value);
       this.sHabilidad.save(this.form.value).subscribe(
       data => {
         document.getElementById('cerrarModalEdicionHabilidad').click();

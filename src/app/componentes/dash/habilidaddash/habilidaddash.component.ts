@@ -35,18 +35,6 @@ export class HabilidaddashComponent implements OnInit {
 
   ngOnInit() {
     this.cargarHabilidad();
-    //Esto es para almacenar en la variable de instancia los datos recuperados por el servicio?
-    /*this.infoService.getDatos().subscribe(bd => {
-      console.log(bd);
-     //Definir informacion a mostrar
-     this.habilidades = bd.habilidades;
-     this.habilidadess = bd.habilidadess;
-     this.idiomas = bd.idioma;
-     this.lecturas = bd.lectura;
-     this.conversacions = bd.conversacion;
-     this.porcentajelect = bd.porcentajelec;
-     this.porcentajeconvers = bd.porcentajeconver
-    });*/
   }
 
   ngOnChanges() : void {
@@ -60,13 +48,11 @@ export class HabilidaddashComponent implements OnInit {
   }
 
   actualizarComponente(event : Event){
-    console.log("estoy mandando algo a mi padre");
     this.cargarHabilidad();
   }
 
   actualizarVariable(hab: Habilidad): void{
     this.habilidad =  hab;
-    console.log("Funciona?")
 
   }
 

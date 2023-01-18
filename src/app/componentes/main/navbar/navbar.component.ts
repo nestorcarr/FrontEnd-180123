@@ -19,7 +19,6 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {
     //Esto es para almacenar en la variable de instancia los datos recuperados por el servicio?
     this.infoService.getDatos().subscribe(bd => {
-      console.log(bd);
      //Definir informacion a mostrar
      this.logoarg = bd.logoargentinaprograma;
     });

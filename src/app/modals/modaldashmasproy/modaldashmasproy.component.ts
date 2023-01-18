@@ -113,20 +113,14 @@ get Estadovalid(){
 }
 
 onCreate(): void{
-  console.log(this.form.value);
-  //const pro = new Proyecto(this.institucion, this.proyecto, this.profesion, this.logoproyecto, this.tema, this.temauno, this.anio, this.estado);
   this.sProyecto.save(this.form.value).subscribe(db => {
-    //alert("Proyecto agregado");
     alert("Fallo en la carga, intentelo nuevamente");
     document.getElementById("botonCierreModalProyecto").click();
     this.actualizarComponente.emit();
-    //window.location.reload();
   }, err=>{
       alert("Proyecto agregado");
       document.getElementById("botonCierreModalProyecto").click();
       this.actualizarComponente.emit();
-      //this.form.reset();
-      //window.location.reload();
 
   });
 }

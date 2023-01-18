@@ -63,29 +63,9 @@ export class AcercademiComponent implements OnInit {
     cargarPersona():void {
       this.sPersona.lista().subscribe(bd => {
         this.personas = bd
-        console.log(this.personas);
     });
       this.sBanner.lista().subscribe(data=>{
         this.banner = data[0];
       })
     }
-    /*
-  ngOnInit(): void {
-//Esto es para almacenar en la variable de instancia los datos recuperados por el servicio?
-    //this.personaService.getDatos().subscribe(bd => {
-      this.infoService.getDatos(this.api).subscribe(bd => {
-      console.log(bd);
-     //this.acercademiUno = db.uno;
-     //Definir informacion a mostrar, imagenprincipal es la variable creada y imageprincipal viene del Json
-     this.nombre = bd.nombre;
-     this.apellido = bd.apellido;
-     this.profesion = bd.profesion;
-     this.acerca_de_mi = bd.acerca_de_mi;
-     this.acercademi = bd.acercademi;
-     this.imagenprincipal = bd.imageprincipal;
-     this.encabezados = bd.encabezado;
-
-    });
-  }*/
-    //title = "Acerca de Mi";
 }

@@ -46,20 +46,5 @@ export class HabilidadComponent implements OnInit {
   });
   }
 
-  /*
-  ngOnInit(): void {
-    //Esto es para almacenar en la variable de instancia los datos recuperados por el servicio?
-    this.infoService.getDatos(this.api).subscribe(bd => {
-     console.log(bd);
-    //Definir informacion a mostrar
-    this.habilidades = bd.habilidades;
-    this.habilidadess = bd.habilidadess;
-    this.idiomas = bd.idioma;
-    this.lecturas = bd.lectura;
-    this.conversacions = bd.conversacion;
-    this.porcentajelect = bd.porcentajelec;
-    this.porcentajeconvers = bd.porcentajeconver
-   });
-  }*/
 
 }

@@ -63,13 +63,11 @@ export class EdicionmasproyComponent implements OnInit {
   }
 
   actualizarComponente(event : Event){
-    console.log("estoy mandando algo a mi padre");
     this.cargarProyecto();
   }
 
   actualizarVariable(hab: Proyecto): void{
     this.proyecto =  hab;
-    console.log("Funciona?")
 
   }
 

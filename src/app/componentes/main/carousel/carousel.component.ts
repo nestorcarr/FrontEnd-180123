@@ -39,39 +39,11 @@ carouselimagen: any="";
   ngOnInit() {
     //Esto es para almacenar en la variable de instancia los datos recuperados por el servicio?
     this.cargarBanner();
-   /* if(this.tokenService.getToken()){
-      this.IsLogged = true;
-    }else{
-      this.IsLogged = false;
-    }*/
-    /*
-    this.infoService.getDatos().subscribe(bd => {
-      console.log(bd);
-     //Definir informacion a mostrar
-     this.carouselimag = bd.carouselimag;
-     this.carouselimage = bd.carouselimage;
-     this.carouselimagen = bd.carouselimagen;
-     this.imageprincipal = bd.imageprincipal;
-    });*/
   }
   cargarBanner():void {
     this.sBanner.lista().subscribe(bd => {
       this.carousel = bd
   });
   }
-
-  /*
-  ngOnInit(): void {
-    //Esto es para almacenar en la variable de instancia los datos recuperados por el servicio?
-    //this.infoService.getDatos(this.api).subscribe(bd => {
-    this.infoService.getDatos(this.api).subscribe(bd => {
-
-      console.log(bd);
-     //Definir informacion a mostrar
-     this.carouselimag = bd.carouselimag;
-     this.carouselimage = bd.carouselimage;
-     this.carouselimagen = bd.carouselimagen;
-    });
-  }*/
 
 }

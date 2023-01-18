@@ -87,8 +87,6 @@ get ColorInvalid(){
 }*/
 
 onCreate(): void{
-  console.log(this.form.value);
-  //const habi = new Habilidad(this.habilidad, this.porcentaje, this.color);
 
   this.sHabilidad.save(this.form.value).subscribe(db => {
     alert("Fallo en la carga, intentelo nuevanente");

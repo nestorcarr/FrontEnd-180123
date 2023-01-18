@@ -41,15 +41,6 @@ banner : Banner = {
     }else{
       this.IsLogged = false;
     }
-    /*
-    this.infoService.getDatos().subscribe(bd => {
-      console.log(bd);
-     //Definir informacion a mostrar
-     this.carouselimag = bd.carouselimag;
-     this.carouselimage = bd.carouselimage;
-     this.carouselimagen = bd.carouselimagen;
-     this.imageprincipal = bd.imageprincipal;
-    });*/
   }
   ngOnChanges() : void {
     this.cargarBanner();
@@ -60,14 +51,12 @@ banner : Banner = {
   });
   }
   actualizarComponente(event : Event){
-    console.log("estoy mandando algo a mi padre");
     this.cargarBanner();
   }
 
 
   actualizarVariable(ban: Banner): void{
     this.banner =  ban;
-    console.log("Funciona?")
   }
 
   delete(id: number){

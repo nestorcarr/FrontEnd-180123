@@ -27,24 +27,11 @@ export class GuardGuard implements CanActivate {
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
 
 
-      /* if (this.accessToken !=='' && this.username !== '')
-    {
-      console.log("funciona");
-      return true;
-    }else{
-      console.log("No funciona");
-      this.route.navigate(['/index'])
-      return false;
-    }
-      //return true;
-  }*/
   let currentUser = this.authService.usuarioAutenticado;
     if (currentUser && currentUser.id){
-      console.log("funciona");
       return true;
   } else{
     this.route.navigate(['/index']);     // ///////
-    //this.rutas.navigate(['/login']);
     return true;
   }
 }

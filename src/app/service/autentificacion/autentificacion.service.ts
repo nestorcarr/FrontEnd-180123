@@ -14,7 +14,6 @@ export class AutentificacionService {
   //url="http://npinti.ddns.net:9008/api/auth/login";
   currentUserSubject: BehaviorSubject<any>;
   constructor(private http:HttpClient) {
-    console.log("El servicio de autentificacion esta corriendo");
     //inizializamos currentUserSubject
     this.currentUserSubject = new BehaviorSubject<any>('');
     //new BehaviorSubject<any>(JSON.parse(sessionStorage.getItem('currentUser') || '{}' ))

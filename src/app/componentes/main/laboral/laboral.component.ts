@@ -45,16 +45,5 @@ export class LaboralComponent implements OnInit {
   });
   }
 
-/*
-  ngOnInit(): void {
-    //Esto es para almacenar en la variable de instancia los datos recuperados por el servicio?
-    this.infoService.getDatos(this.api).subscribe(bd => {
-      console.log(bd);
-     //Definir informacion a mostrar
-     this.experiencialaboral = bd.experiencialaboral;
-     this.labora = bd.laboral;
-
-    });
-  }*/
 
 }

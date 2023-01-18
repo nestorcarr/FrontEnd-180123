@@ -37,7 +37,6 @@ login(usuario : LoginUsuario): Observable<any> {
   .pipe(map(data=>
     {
     this.currentUser.next(data);
-    this.currentUser.subscribe(data => console.log(data));
     return data;
   }));
 }

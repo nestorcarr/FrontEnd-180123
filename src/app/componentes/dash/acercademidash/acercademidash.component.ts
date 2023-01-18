@@ -47,21 +47,6 @@ export class AcercademidashComponent implements OnInit {
       this.IsLogged = false;
     }
   }
-  /*ngOnInit() {
-    //Esto es para almacenar en la variable de instancia los datos recuperados por el servicio?
-    this.cargarPersona();
-    /*this.infoService.getDatos().subscribe(bd => {
-      console.log(bd);
-     //this.acercademiUno = db.uno;
-     //Definir informacion a mostrar, imagenprincipal es la variable creada y imageprincipal viene del Json
-     this.nombre = bd.nombre;
-     this.apellido = bd.apellido;
-     this.profesion = bd.profesion;
-     this.acerca_de_mi = bd.acerca_de_mi;
-     this.acercademi = bd.acercademi;
-
-    });*/
-  //}*/
 
   ngOnChanges() : void {
     this.cargarPersona();
@@ -74,13 +59,11 @@ export class AcercademidashComponent implements OnInit {
   }
 
   actualizarComponente(event : Event){
-    console.log("estoy mandando algo a mi padre");
     this.cargarPersona();
   }
 
   actualizarVariable(per: Persona): void{
     this.persona =  per;
-    console.log("Funciona?")
   }
 
   /*delete(id: number){

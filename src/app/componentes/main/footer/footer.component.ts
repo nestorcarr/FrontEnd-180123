@@ -27,7 +27,6 @@ enlace: string="";
   ngOnInit(): void {
     //Esto es para almacenar en la variable de instancia los datos recuperados por el servicio?
     this.infoService.getDatos().subscribe(bd => {
-      console.log(bd);
      //Definir informacion a mostrar
      this.enlace = bd.enlacewhatsapp;
      this.confecc = bd.confeccion;

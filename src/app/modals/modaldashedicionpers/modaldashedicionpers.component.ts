@@ -44,34 +44,11 @@ export class ModaldashedicionpersComponent implements OnInit {
 
     })
   }
-/*
-  ngOnInit(): void {
-    const id = this.activatedRoute.snapshot.params['id'];
-    this.sPersona.detail(id).subscribe(data =>{
-      this.perso = data;
-    }
-    )*/
-    //Lo comente para que no me salga el cartel y me redireccione al index
-    /*,err =>{
-      alert("Error al cargar los datos");
-      this.router.navigate(['']);
-    } */
-/*
-    ngOnInit(): void {
-      this.cargarInfo();
-      const id = this.activatedRoute.snapshot.params['id'];
-      this.sPersona.getById(this.id).subscribe(
-        data => {
-          this.perso = data;
-        }, () =>{
-        })
-    }*/
     ngOnInit(): void{
       // TODO document why this method 'ngOnInit' is empty
     }
 
     ngOnChanges(): void {
-        console.log(this.editarPersona);
         this.form.controls['id']?.setValue(this.editarPersona.id);
         this.form.controls['nombre']?.setValue(this.editarPersona.nombre);
         this.form.controls['apellido']?.setValue(this.editarPersona.apellido);

@@ -100,7 +100,6 @@ get EstadoValid(){
 }
 
 onCreate(): void{
-  console.log(this.form.value);
   //const educa = new Educacion(this.universidad, this.logo, this.titulo, this.institucion, this.estado);
   this.sEducacion.save(this.form.value).subscribe(db => {
     alert("Fallo en la carga, intentelo nuevamente");

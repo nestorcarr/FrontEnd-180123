@@ -56,7 +56,6 @@ export class ModaleditarComponent implements OnInit {
   }
 
   ngOnChanges(): void {
-      console.log(this.editarBanner);
       this.form.controls['id']?.setValue(this.editarBanner.id);
       this.form.controls['imageprincipal']?.setValue(this.editarBanner.imageprincipal);
       this.form.controls['carouselimag']?.setValue(this.editarBanner.carouselimag);
@@ -78,15 +77,8 @@ export class ModaleditarComponent implements OnInit {
   get Carouselimagen(){
     return this.form.get('carouselimagen');
   }
-  /*get Imageprincipal(){
-    return this.form.get('imageprincipal');
-  }*/
-  onUpdate(): void{
-    console.log(this.form.value);
-    //const id = this.activatedRoute.snapshot.params['id'];
-    //this.bann.id = this.editarBanner.id;
-    //this.bann.imageprincipal = this.form.get('imageprincipal').value;
 
+  onUpdate(): void{
       this.sBanner.save(this.form.value).subscribe(
       data => {
         //alert("error");

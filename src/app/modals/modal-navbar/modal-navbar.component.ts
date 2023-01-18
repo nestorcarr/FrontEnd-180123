@@ -71,11 +71,10 @@ ngOnInit(): void {
   }*/
   onLogin(event: Event): void{
     event.preventDefault();
-    this.loginUsuario = new LoginUsuario(this.username, this.password);
         //this.authService.login(this.loginUsuario).subscribe((data: { accessToken: any; username: any; authorities: string[]; }) =>{
     //this.authService.login(this.form.value).subscribe((data: { accessToken: any; username: any; authorities: string[]; }) =>{
     //this.authService.login(this.loginUsuario).subscribe((data: { accessToken: any; username: any; authorities: string[]; }) =>{
-    this.authService.login(this.loginUsuario).subscribe(data =>{
+    this.authService.login(this.form.value).subscribe(data =>{
        //this.authService.login(this.form.value).subscribe((data: { token: any; nombreUsuario: any; authorities: string[]; }) =>{
        //this.authService.login(this.form.value).subscribe(data  => {
          console.log(data);
@@ -162,27 +161,5 @@ ngOnInit(): void {
   }
   get UsernameValid(){
     return this.Username?.valid;
-
   }
-  /*
-  onLogin(): void{
-    this.loginUsuario = new LoginUsuario(this.nombreUsuario, this.password);
-    this.authService.login(this.loginUsuario).subscribe(data =>{
-        this.isLogged = true;
-        this.isLogginFail = false;
-        this.tokenService.setToken(data.token);
-        this.tokenService.setUserName(data.nombreUsuario);
-        this.tokenService.setAuthorities(data.authorities);
-        this.roles = data.authorities;
-        this.router.navigate([''])
-      }, err =>{
-        this.isLogged = false;
-        this.isLogginFail = true;
-        this.errMsj = err.error.mensaje;
-        console.log(this.errMsj);
-
-      })
-  }*/
-
-
 }

@@ -51,8 +51,6 @@ export class ModaldashedicionlabComponent implements OnInit {
   }
 
   ngOnChanges(): void {
-    console.log(this.editarLaboral);
-
     this.form.controls['id']?.setValue(this.editarLaboral.id);
     this.form.controls['empresa']?.setValue(this.editarLaboral.empresa);
     this.form.controls['logo']?.setValue(this.editarLaboral.logo);
@@ -82,32 +80,17 @@ export class ModaldashedicionlabComponent implements OnInit {
   }
 
   onUpdate(): void{
-    console.log(this.form.value);
-    //this.traba.id = this.editarLaboral.id;
-    //this.traba.empresa = this.form.get('empresa').value;
-   // this.traba.logo = this.form.get('logo').value;
-    //this.traba.cargo = this.form.get('cargo').value;
-    //this.traba.inicio = this.form.get('inicio').value;
-    //this.traba.finalizacion = this.form.get('cargo').value;
-    //this.traba.tareas = this.form.get('tareas').value;
     this.sLaboral.save(this.form.value).subscribe(
       data => {
         document.getElementById('cerrarModalEdicionLaboral').click();
-        //alert("la informacion fue modificada");
         alert("Error en la modificacion, intentelo nuevanente");
         this.actualizarComponente.emit();
         this.router.navigate(['/dashboard']);
-        //window.location.reload();
-        //alert("la informacion fue modificada");
-        //$("exampleModal12").modal("hide");
-        //modalService.close('exampleModal12');
         }, err =>{
         alert("la informacion fue modificada");
         this.router.navigate(['/dashboard']);
-        //alert("Error en la modificacion, intentelo nuevanente");
         this.actualizarComponente.emit();
         document.getElementById('cerrarModalEdicionLaboral').click();
-        //window.location.reload();
       }
     )
 

@@ -37,15 +37,6 @@ proyecto : Proyecto = {
   ngOnInit() {
     //Esto es para almacenar en la variable de instancia los datos recuperados por el servicio?
     this.cargarProyecto();
-    /*
-    this.infoService.getDatos().subscribe(bd => {
-      console.log(bd);
-     //Definir informacion a mostrar
-     this.proyectos = bd.proyectos;
-     this.proyectoss = bd.proyectoss;
-     this.profesions = bd.profesions
-
-    });*/
   }
   ngOnChanges() : void {
     this.cargarProyecto();
@@ -57,15 +48,12 @@ proyecto : Proyecto = {
   });
   }
   actualizarComponente(event : Event){
-    console.log("estoy mandando algo a mi padre");
     this.cargarProyecto();
   }
 
 
   actualizarVariable(pro: Proyecto): void{
     this.proyecto =  pro;
-    console.log("Funciona?");
-    console.log(this.proyecto);
   }
 
   delete(id: number){

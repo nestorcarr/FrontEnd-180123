@@ -48,17 +48,4 @@ export class ProyectoComponent implements OnInit {
       this.proyectos = bd
   });
   }
-
-  /*
-  ngOnInit(): void {
-         //Esto es para almacenar en la variable de instancia los datos recuperados por el servicio?
-         this.infoService.getDatos(this.api).subscribe(bd => {
-          console.log(bd);
-         //Definir informacion a mostrar
-         this.proyectos = bd.proyectos;
-         this.proyectoss = bd.proyectoss;
-
-        });
-  }*/
-
 }

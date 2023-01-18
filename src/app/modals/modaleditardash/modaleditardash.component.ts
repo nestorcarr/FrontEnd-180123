@@ -44,35 +44,12 @@ export class ModaleditardashComponent implements OnInit {
 
     })
   }
-  /*
-  ngOnInit(): void {
-    this.cargarInfo();
-    const id = this.activatedRoute.snapshot.params['id'];
-    this.sPersona.getById(this.id).subscribe(
-      data => {
-        this.perso = data;
-      }, () =>{
 
-      })
-  }*/
-  /*ngOnInit() {
-   /* this.cargarInfo();
-    const id = this.activatedRoute.snapshot.params['id'];
-    this.sPersona.getById(id).subscribe(
-      data =>{
-      this.perso = data;
-
-  }, () =>{
-
-      }
-    )
-  }*/
   ngOnInit(): void{
     // TODO document why this method 'ngOnInit' is empty
   }
 
   ngOnChanges(): void {
-      console.log(this.editarPersona);
       this.form.controls['id']?.setValue(this.editarPersona.id);
       this.form.controls['nombre']?.setValue(this.editarPersona.nombre);
       this.form.controls['apellido']?.setValue(this.editarPersona.apellido);

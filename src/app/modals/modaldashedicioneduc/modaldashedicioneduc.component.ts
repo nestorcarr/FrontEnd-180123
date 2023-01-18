@@ -58,7 +58,6 @@ export class ModaldashedicioneducComponent implements OnInit {
     /**/
   }
   ngOnChanges(): void {
-      console.log(this.editarEducacion);
       this.form.controls['id']?.setValue(this.editarEducacion.id);
       this.form.controls['universidad']?.setValue(this.editarEducacion.universidad);
       this.form.controls['logo']?.setValue(this.editarEducacion.logo);

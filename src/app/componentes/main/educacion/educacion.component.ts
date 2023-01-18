@@ -46,15 +46,5 @@ export class EducacionComponent implements OnInit {
   });
   }
 
-/*
-  ngOnInit(): void {
-     //Esto es para almacenar en la variable de instancia los datos recuperados por el servicio?
-     this.infoService.getDatos(this.api).subscribe(bd => {
-      console.log(bd);
-     //Definir informacion a mostrar, mieducacion es la variable creada y educacion viene del Json
-     this.mieducacion = bd.educacion;
-     this.mieducacions = bd.educacions;
-    });
-  }*/
 
 }

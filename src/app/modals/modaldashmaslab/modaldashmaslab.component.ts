@@ -115,8 +115,6 @@ get TareasValid(){
 }
 
 onCreate(): void{
-  console.log(this.form.value);
-  //const labo = new Laboral(this.empresa, this.logoempresa, this.cargo, this.inicio, this.finalizacion, this.tareas);
   this.sLaboral.save(this.form.value).subscribe(db => {
     alert("Fallo la carga, intentelo nuevamente");
    this.actualizarComponente.emit();

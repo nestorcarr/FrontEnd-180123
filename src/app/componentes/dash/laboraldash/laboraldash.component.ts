@@ -47,13 +47,11 @@ export class LaboraldashComponent implements OnInit {
   }
 
   actualizarComponente(event : Event){
-    console.log("estoy mandando algo a mi padre");
     this.cargarLaboral();
   }
 
   actualizarVariable(lab: Laboral): void{
     this.laboral =  lab;
-    console.log("Funciona?");
   }
 /*
   delete(id?: number){

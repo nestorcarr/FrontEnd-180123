@@ -23,9 +23,6 @@ export class BarralateralComponent implements OnInit {
   ngOnInit(): void {
     //Esto es para almacenar en la variable de instancia los datos recuperados por el servicio?
     this.infoService.getDatos().subscribe(bd => {
-      console.log(bd);
-     //this.acercademiUno = db.uno;
-     //Definir informacion a mostrar, imagenprincipal es la variable creada y imageprincipal viene del Json
      this.datospersonales = bd.datospersonales;
      this.laboral = bd.laboral;
      this.educacions = bd.educacions;
