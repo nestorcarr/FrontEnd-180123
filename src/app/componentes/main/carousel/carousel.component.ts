@@ -3,7 +3,7 @@ import { Banner } from 'src/app/model/banner';
 //Importo el servicio
 //import { InfoService } from '../../../service/info/info.service';
 import { BannerService } from 'src/app/service/banner.service';
-import { TokenService } from 'src/app/service/token.service';
+//import { TokenService } from 'src/app/service/token.service';
 
 @Component({
   selector: 'app-carousel',
