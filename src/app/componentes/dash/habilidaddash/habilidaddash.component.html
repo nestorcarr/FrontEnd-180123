@@ -2,7 +2,7 @@
   <div class="col-auto text-center">
       <ul class="list-group list-group-horizontal mb-3">
           <li class="list-group-item">
-            <i class="fa-sharp fa-solid fa-plus fa-2xl align-items-end pt-3 px-0" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal400"></i>
+            <i *ngIf="admin" class="fa-sharp fa-solid fa-plus fa-2xl align-items-end pt-3 px-0" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal400"></i>
           </li>
       </ul>
   </div>
@@ -20,8 +20,8 @@
       </div>
   </div>
   <div class="col-md-12 col-lg-1 p-0 d-flex item-alling-end">
-    <button type="button" (click)="actualizarVariable(habilidad)" data-bs-toggle="modal" data-bs-target="#exampleModal12" class="btn btn-close-white mx-auto" ><i class="fa-sharp fa-solid fa-pencil fa-2 align-items-end pt-3 icon"></i></button>
-    <button type="submit" class="btn btn-close-white mx-auto"><i class="fa-sharp fa-solid fa-trash fa-2 align-items-end pt-3" (click)="delete(habilidad.id)"></i></button>
+    <button *ngIf="admin" type="button" (click)="actualizarVariable(habilidad)" data-bs-toggle="modal" data-bs-target="#exampleModal12" class="btn btn-close-white mx-auto" ><i class="fa-sharp fa-solid fa-pencil fa-2 align-items-end pt-3 icon"></i></button>
+    <button *ngIf="admin" type="submit" class="btn btn-close-white mx-auto"><i class="fa-sharp fa-solid fa-trash fa-2 align-items-end pt-3" (click)="delete(habilidad.id)"></i></button>
   </div>
 </div>
 <app-modaldashedicionhab

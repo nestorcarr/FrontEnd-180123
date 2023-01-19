@@ -2,7 +2,7 @@
   <div class="col-auto text-center">
       <ul class="list-group list-group-horizontal">
           <li class="list-group-item">
-            <i class="fa-sharp fa-solid fa-plus fa-2xl align-items-end pt-3 px-0" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal200"></i>
+            <i *ngIf="admin" class="fa-sharp fa-solid fa-plus fa-2xl align-items-end pt-3 px-0" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal200"></i>
           </li>
       </ul>
   </div>
@@ -47,8 +47,8 @@
               <i class="fa-sharp fa-solid fa-trash fa-2xl align-items-end pt-3" type="button" data-bs-toggle="modal" (click)="delete(laboral.id)"></i>
             </li>
         </ul>-->
-        <button type="button" (click)="actualizarVariable(laboral)" data-bs-toggle="modal" data-bs-target="#exampleModal8" class="btn btn-close-white" ><i class="fa-sharp fa-solid fa-pencil fa-2 align-items-end pt-3 icon"></i></button>
-        <button type="submit" class="btn btn-close-white"><i class="fa-sharp fa-solid fa-trash fa-2 align-items-end pt-3" (click)="delete(laboral.id)"></i></button>
+        <button *ngIf="admin" type="button" (click)="actualizarVariable(laboral)" data-bs-toggle="modal" data-bs-target="#exampleModal8" class="btn btn-close-white" ><i class="fa-sharp fa-solid fa-pencil fa-2 align-items-end pt-3 icon"></i></button>
+        <button *ngIf="admin" type="submit" class="btn btn-close-white"><i class="fa-sharp fa-solid fa-trash fa-2 align-items-end pt-3" (click)="delete(laboral.id)"></i></button>
     </div>
   </div>
   <hr class="ps-5 w-75">

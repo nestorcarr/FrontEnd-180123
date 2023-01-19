@@ -17,11 +17,13 @@ export class AuthService {
   authURL = environment.URL + 'login';
   //authURL = 'https://argprograma-backend.onrender.com/login';
   currentUser: BehaviorSubject<any>;
+  admin : BehaviorSubject<boolean>;
 
 
   constructor(private httpClient: HttpClient) {
     //this.currentUser = new BehaviorSubject('');
     this.currentUser = new BehaviorSubject<any>({});
+    this.admin = new BehaviorSubject<boolean>(false);
   }
 
  public nuevo(nuevoUsuario: NuevoUsuario): Observable<any>{
@@ -37,6 +39,14 @@ login(usuario : LoginUsuario): Observable<any> {
   .pipe(map(data=>
     {
     this.currentUser.next(data);
+      this.currentUser.subscribe(data => {
+        if (data.roles.includes("ROLE_ADMIN")){
+          this.admin.next(true);
+        } else {
+          this.admin.next(false);
+        }
+      })
+    
     return data;
   }));
 }

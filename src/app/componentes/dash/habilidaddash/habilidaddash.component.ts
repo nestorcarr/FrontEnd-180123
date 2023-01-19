@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Habilidad } from 'src/app/model/habilidad';
+import { AuthService } from 'src/app/service/auth.service';
 import { HabilidadService } from 'src/app/service/habilidad.service';
 //Importo el servicio
 //import { InfoService } from '../../../service/info/info.service';
@@ -27,11 +28,18 @@ export class HabilidaddashComponent implements OnInit {
    color: ""
   };
 
+  admin : boolean = false;
+
   constructor(
     //Inyectar el Servicio para tener acceso en la Clase a los Metodos
     //private infoService: InfoService
-    private sHabilidad:HabilidadService
-  ) { }
+    private sHabilidad:HabilidadService,
+    private authService : AuthService
+    ) { 
+      this.authService.admin.subscribe(data =>{
+        this.admin = data;
+      })
+    }
 
   ngOnInit() {
     this.cargarHabilidad();

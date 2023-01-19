@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Route, Router } from '@angular/router';
 import { Laboral } from 'src/app/model/laboral';
+import { AuthService } from 'src/app/service/auth.service';
 import { LaboralService } from 'src/app/service/laboral.service';
 //import { InfoService } from '../../../service/info/info.service';
 
@@ -23,20 +24,25 @@ export class LaboraldashComponent implements OnInit {
 
 };
 
+admin : boolean = false;
 
   constructor(
      //Inyectar el Servicio para tener acceso en la Clase a los Metodos
      private sLaboral:LaboralService,
      //private infoService: InfoService
-     private router: Router
-  ) { }
-
+     private router: Router,
+     private authService : AuthService
+     ) { 
+       this.authService.admin.subscribe(data =>{
+         this.admin = data;
+       })
+     }
   ngOnInit() {
-    //Esto es para almacenar en la variable de instancia los datos recuperados por el servicio?
     this.cargarLaboral();
   }
 
   ngOnChanges() : void {
+
     this.cargarLaboral();
   }
 

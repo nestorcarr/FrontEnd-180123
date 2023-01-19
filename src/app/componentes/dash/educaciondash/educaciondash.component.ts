@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Educacion } from 'src/app/model/educacion';
+import { AuthService } from 'src/app/service/auth.service';
 import { EducacionService } from 'src/app/service/educacion.service';
 //Importo el servicio
 //import { InfoService } from '../../../service/info/info.service';
@@ -21,12 +22,18 @@ educacion : Educacion = {
   institucion: "",
   estado: ""
 };
+admin : boolean = false;
 
-  constructor(
+constructor(
     //Inyectar el Servicio para tener acceso en la Clase a los Metodos
-    private sEducacion:EducacionService
+    private sEducacion:EducacionService,
+    private authService : AuthService
+    ) { 
+      this.authService.admin.subscribe(data =>{
+        this.admin = data;
+      })
+    }
 
-  ) { }
 
   ngOnInit() {
     //Esto es para almacenar en la variable de instancia los datos recuperados por el servicio?

@@ -30,7 +30,7 @@
                   <div class="col-6 posImag2">
                       <!--<img src="{{ banner.imageprincipal }}" class="rounded-circle posImag3" alt="..." title="...">-->
                       <img [src]="banner.imageprincipal" class="rounded-circle posImag3" alt="..." title="...">
-                      <i class="fa-sharp fa-solid fa-pencil fa-2xl align-items-end icon3" type="button" (click)="actualizarVariable(banner)"data-bs-toggle="modal" data-bs-target="#staticBackdrop"></i>
+                      <i  *ngIf="admin" class="fa-sharp fa-solid fa-pencil fa-2xl align-items-end icon3" type="button" (click)="actualizarVariable(banner)"data-bs-toggle="modal" data-bs-target="#staticBackdrop"></i>
                   </div>
                   <div class="col-6 align-items-end justify-content-end pt-5 ">
                     <!--<button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal6" class="btn btn-close-white"><i class="fa-sharp fa-solid fa-pencil fa-2xl align-items-end pt-3 icon"></i></button>-->
@@ -38,7 +38,7 @@
                   <!--*ngIf="isLogged"-->
                       <!--<div class="col-auto">-->
                           <!--<a href="#" class="icon2 pe-5" title=".">-->
-                           <i class="fa-sharp fa-solid fa-pencil fa-2xl align-items-end icon3 icon2 pe-5" type="button" (click)="actualizarVariable(banner)" data-bs-toggle="modal" data-bs-target="#staticBackdrop1"></i>
+                           <i  *ngIf="admin" class="fa-sharp fa-solid fa-pencil fa-2xl align-items-end icon3 icon2 pe-5" type="button" (click)="actualizarVariable(banner)" data-bs-toggle="modal" data-bs-target="#staticBackdrop1"></i>
                           <!--</a>-->
                      <!-- </div>-->
                   </div>

@@ -9,11 +9,16 @@ import { TokenService } from './token.service';
 })
 export class GuardGuard implements CanActivate {
 
+
+currentUser : any;
+
   constructor (private tokenService: TokenService,
     private route: Router,
     private authService: AuthService
     ){
-     
+     this.authService.currentUser.subscribe(data=>{
+      this.currentUser = data;
+     })
     }
 
 
@@ -22,12 +27,13 @@ export class GuardGuard implements CanActivate {
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
 
 
-  let currentUser = this.authService.usuarioAutenticado;
-    if (currentUser && currentUser.id && currentUser.roles.includes('ROLE_ADMIN')){
-      return true;
+  
+      
+  if (this.currentUser && this.currentUser.id && (this.currentUser.roles.includes('ROLE_ADMIN') || this.currentUser.roles.includes('ROLE_USER'))){
+    return true;
   } else{
     this.route.navigate(['/index']);     // ///////
-    return true;
+    return false;
   }
 }
 

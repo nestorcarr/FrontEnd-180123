@@ -1,6 +1,7 @@
 
 import { Component, OnInit } from '@angular/core';
 import { Banner } from 'src/app/model/banner';
+import { AuthService } from 'src/app/service/auth.service';
 import { BannerService } from 'src/app/service/banner.service';
 import { TokenService } from 'src/app/service/token.service';
 
@@ -24,12 +25,18 @@ banner : Banner = {
   carouselimagen: "",
   imageprincipal: ""
  };
+ admin : boolean = false;
 
-  constructor(
+ constructor(
     //private infoService: InfoService
     private sBanner:BannerService,
-    private tokenService: TokenService
-  ) { }
+    private tokenService: TokenService,
+    private authService : AuthService
+  ) { 
+    this.authService.admin.subscribe(data =>{
+      this.admin = data;
+    })
+  }
 
   IsLogged = false;
 

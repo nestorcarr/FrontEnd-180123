@@ -2,7 +2,7 @@
   <div class="col-auto text-center">
       <ul class="list-group list-group-horizontal">
           <li class="list-group-item">
-              <i class="fa-sharp fa-solid fa-plus fa-2xl align-items-end pt-3 px-0" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal600"></i>
+              <i *ngIf="admin" class="fa-sharp fa-solid fa-plus fa-2xl align-items-end pt-3 px-0" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal600"></i>
           </li>
       </ul>
   </div>
@@ -37,8 +37,8 @@
   <div class="row justify-content-center mt-3">
     <div class="col-auto text-center">
         <div class="col-1 p-0 d-flex item-alling-end ">
-            <button type="button" (click)="actualizarVariable(proyec)" data-bs-toggle="modal" data-bs-target="#exampleModal14" class="btn btn-close-white text-white"><i class="fa-sharp fa-solid fa-pencil fa-2xl align-items-end pt-3 ps-2 icon"></i></button>
-            <button type="submit" class="btn btn-close-white" (click)="delete(proyec.id)"><i class="fa-sharp fa-solid fa-trash fa-2xl align-items-end pt-3"></i></button>
+            <button *ngIf="admin" type="button" (click)="actualizarVariable(proyec)" data-bs-toggle="modal" data-bs-target="#exampleModal14" class="btn btn-close-white text-white"><i class="fa-sharp fa-solid fa-pencil fa-2xl align-items-end pt-3 ps-2 icon"></i></button>
+            <button *ngIf="admin" type="submit" class="btn btn-close-white" (click)="delete(proyec.id)"><i class="fa-sharp fa-solid fa-trash fa-2xl align-items-end pt-3"></i></button>
         </div>
 <!--
         <ul class="list-group list-group-horizontal">

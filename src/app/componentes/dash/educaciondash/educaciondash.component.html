@@ -2,7 +2,7 @@
   <div class="col-auto text-center">
       <ul class="list-group list-group-horizontal">
           <li class="list-group-item">
-              <i class="fa-sharp fa-solid fa-plus fa-2xl align-items-end pt-3 px-0" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal300"></i>
+              <i *ngIf="admin" class="fa-sharp fa-solid fa-plus fa-2xl align-items-end pt-3 px-0" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal300"></i>
           </li>
         </ul>
   </div>
@@ -37,8 +37,8 @@
   </div>
   <div class="row justify-content-center mt-3">
     <div class="col-auto text-center">
-      <button type="button" (click)="actualizarVariable(educa)" data-bs-toggle="modal" data-bs-target="#exampleModal10" class="btn btn-close-white" ><i class="fa-sharp fa-solid fa-pencil fa-2 align-items-end pt-3 icon"></i></button>
-      <button type="submit" class="btn btn-close-white"><i class="fa-sharp fa-solid fa-trash fa-2 align-items-end pt-3" (click)="delete(educa.id)"></i></button>
+      <button *ngIf="admin" type="button" (click)="actualizarVariable(educa)" data-bs-toggle="modal" data-bs-target="#exampleModal10" class="btn btn-close-white" ><i class="fa-sharp fa-solid fa-pencil fa-2 align-items-end pt-3 icon"></i></button>
+      <button *ngIf="admin" type="submit" class="btn btn-close-white"><i class="fa-sharp fa-solid fa-trash fa-2 align-items-end pt-3" (click)="delete(educa.id)"></i></button>
         <!--<ul class="list-group list-group-horizontal">
             <li class="list-group-item">
 

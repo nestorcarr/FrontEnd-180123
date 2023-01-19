@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Persona } from 'src/app/model/persona';
+import { AuthService } from 'src/app/service/auth.service';
 import { PersonaService } from 'src/app/service/persona.service';
 import { TokenService } from 'src/app/service/token.service';
 //import { InfoService } from '../../../service/info/info.service';
@@ -12,7 +13,7 @@ export class AcercademidashComponent implements OnInit {
 
 
     //Inicializo y Creo la variable de instancia para almacenar los datos que trata el servicio
-    personas: Persona[] = [];//any=[];
+  personas: Persona[] = [];//any=[];
   //acercademiUno: any;
   /*nombre: string = '';
   apellido: string = '';
@@ -30,12 +31,19 @@ export class AcercademidashComponent implements OnInit {
     imageprincipal: ""
   };
 
+  admin : boolean = false;
+
   constructor(
     //Inyectar el Servicio para tener acceso en la Clase a los Metodos
     //private infoService: InfoService
     private sPersona:PersonaService,
-    private tokenService: TokenService
-  ) { }
+    private tokenService: TokenService,
+    private authService : AuthService
+  ) { 
+    this.authService.admin.subscribe(data =>{
+      this.admin = data;
+    })
+  }
 
   IsLogged = false;
 
