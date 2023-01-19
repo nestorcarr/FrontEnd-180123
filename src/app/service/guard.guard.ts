@@ -29,7 +29,7 @@ currentUser : any;
 
   
       
-  if (this.currentUser && this.currentUser.id && (this.currentUser.roles.includes('ROLE_ADMIN') || this.currentUser.roles.includes('ROLE_USER'))){
+  if (this.currentUser && (this.currentUser.roles.includes('ROLE_ADMIN') || this.currentUser.roles.includes('ROLE_USER'))){
     return true;
   } else{
     this.route.navigate(['/index']);     // ///////

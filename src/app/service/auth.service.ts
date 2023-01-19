@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { Injectable, SimpleChange } from '@angular/core';
 import { BehaviorSubject, map, Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { JwtDto } from '../model/jwt-dto';
@@ -22,7 +22,11 @@ export class AuthService {
 
   constructor(private httpClient: HttpClient) {
     //this.currentUser = new BehaviorSubject('');
-    this.currentUser = new BehaviorSubject<any>({});
+    this.currentUser = new BehaviorSubject<any>({
+      "authToken" : sessionStorage.getItem('AuthToken'),
+      "roles" : sessionStorage.getItem('AuthAuthorities'),
+      "authUsername" : sessionStorage.getItem('AuthUsername') 
+     });
     this.admin = new BehaviorSubject<boolean>(false);
   }
 
