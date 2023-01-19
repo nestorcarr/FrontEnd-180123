@@ -16,7 +16,7 @@
           </div>
           <h3>{{ laboral.empresa }}</h3>
           <h6>{{ laboral.cargo }}</h6>
-          <p>{{ laboral.inicio }} - {{ laboral.finalizacion }}</p>
+          <p>{{ laboral.inicio | date: "dd-MM-yyyy" }} - {{ laboral.finalizacion| date: "dd-MM-yyyy" }}</p>
         </div>
         <div class="col-1"></div>
 

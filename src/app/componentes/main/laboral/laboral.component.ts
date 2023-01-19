@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Laboral } from 'src/app/model/laboral';
 import { LaboralService } from 'src/app/service/laboral.service';
-import { InfoService } from '../../../service/info/info.service';
+//import { InfoService } from '../../../service/info/info.service';
 
 @Component({
   selector: 'app-laboral',
