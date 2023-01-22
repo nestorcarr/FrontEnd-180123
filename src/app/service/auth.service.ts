@@ -25,7 +25,7 @@ export class AuthService {
     this.currentUser = new BehaviorSubject<any>({
       "authToken" : sessionStorage.getItem('AuthToken'),
       "roles" : sessionStorage.getItem('AuthAuthorities'),
-      "authUsername" : sessionStorage.getItem('AuthUsername') 
+      "authUsername" : sessionStorage.getItem('AuthUsername') || []
      });
     this.admin = new BehaviorSubject<boolean>(false);
   }
@@ -50,7 +50,7 @@ login(usuario : LoginUsuario): Observable<any> {
           this.admin.next(false);
         }
       })
-    
+
     return data;
   }));
 }

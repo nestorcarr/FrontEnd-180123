@@ -10,8 +10,65 @@
 .bord{
   border-radius: 1rem !important;
 }
-/*
-.y{
-  height: 130% !important;
+
+.carousel-control-next, .carousel-control-prev {
+  position: absolute;
+  top: 0;
+  /* bottom: 0; */
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 15%;
+  padding: 1rem;
+  color: #fff;
+  text-align: right;
+  background: 0 0;
+  border: 0;
+  opacity: .5;
+  transition: opacity .15s ease;
 }
-*/
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  /*[class*="col-"] {
+    width: 100%;
+    height: 65px !important;
+    font-size:7px;
+    text-align: center;
+    //display: flex;
+  };*/
+
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+/* For mobile phones: */
+.banner{
+  margin-top: 200px;
+}
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 400px) {
+  .banner{
+    margin-top: 200px;
+  }
+}
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 992px) {
+  .banner{
+    margin-top: 150px;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+}
+

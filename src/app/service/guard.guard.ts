@@ -26,13 +26,10 @@ currentUser : any;
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
 
-
-  
-      
-  if (this.currentUser && (this.currentUser.roles.includes('ROLE_ADMIN') || this.currentUser.roles.includes('ROLE_USER'))){
+  if (this.currentUser && (this.currentUser.roles?.includes('ROLE_ADMIN') || this.currentUser.roles?.includes('ROLE_USER'))){
     return true;
   } else{
-    this.route.navigate(['/index']);     // ///////
+    this.route.navigate(['/index']);
     return false;
   }
 }

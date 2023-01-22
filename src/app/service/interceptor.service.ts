@@ -4,12 +4,14 @@ import { Observable } from 'rxjs';
 //import { AutentificacionService } from './autentificacion/autentificacion.service';
 import { TokenService } from './token.service';
 
+
 @Injectable({
   providedIn: 'root'
 })
 
 export class InterceptorService {
-  constructor(private tokenService: TokenService){}
+  constructor(private tokenService: TokenService,
+    ){}
 
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>>{
       let intReq = req;

@@ -9,7 +9,8 @@ import { InfoService } from '../../../service/info/info.service';
 })
 export class NavbarComponent implements OnInit {
   //Inicializo y Creo la variable de instancia para almacenar los datos que trata el servicio
-  logoarg: string="";
+  logoargentinaprograma: string="";
+  enlace: string="";
 
   constructor(
     //Inyectar el Servicio para tener acceso en la Clase a los Metodos
@@ -20,7 +21,8 @@ export class NavbarComponent implements OnInit {
     //Esto es para almacenar en la variable de instancia los datos recuperados por el servicio?
     this.infoService.getDatos().subscribe(bd => {
      //Definir informacion a mostrar
-     this.logoarg = bd.logoargentinaprograma;
+     this.logoargentinaprograma = bd.logoargentinaprograma;
+     this.enlace = bd.enlace;
     });
   }
 

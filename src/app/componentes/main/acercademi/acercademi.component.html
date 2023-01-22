@@ -1,18 +1,18 @@
-<section id="sobreMi" class="about">
+<section id="sobreMi" class="about mt-2">
   <div *ngFor="let persona of personas" class="row mt-1">
     <div id="sobre_mi">
 
       <div class="container-fluid border rounded-3 capa0">
           <div class="row mt-3">
-              <div class="col-sm-6 col-lg-3 pos_izq ps-5 text-center capa1">
-                  <img [src]="banner.imageprincipal" class="rounded-circle posImag" alt="..." title="...">
+              <div class="col-md-3 col-lg-3 col-sm-3 col-xs-3 pos_izq ps-5 text-center capa1">
+                  <img [src]="banner.imageprincipal" class="rounded-circle posImag" id="ip" alt="..." title="...">
                   <h2 class="mt-3">{{ persona.nombre }} {{ persona.apellido }}</h2>
                   <h4 class="ps-5 pos_izq text-center">{{ persona.profesion }}</h4>
                   <p>
 
                   </p>
               </div>
-              <div class="col-3">
+              <div class="col-lg-3">
 
               </div>
 
@@ -23,7 +23,7 @@
                           <p>{{ persona.acerca_de_mi }}</p>
                           <p>{{ persona.acercademi }}</p>
                       </blockquote>
-                      <figcaption class="blockquote-footer">
+                      <figcaption class="blockquote-footer pe-5">
                         Someone famous in <cite title="Source Title">Source Title</cite>
                       </figcaption>
                   </figure>

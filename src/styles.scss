@@ -34,6 +34,7 @@ section{
   background: #2966ac ;
   border-radius: 1rem !important;
 }
+
 .list-group{
   --bs-list-group-bg: transparent !important;
   --bs-list-group-border-color: transparent !important;
@@ -55,8 +56,7 @@ li.list-group-item{
   background-color: rgb(129, 129, 206) !important;
   margin: 0 0 .75rem 0 !important;
   border-radius: 1rem !important;
-
-}
+ }
 .navbar{
 --bs-navbar-padding-y:  0rem !important;
 --bs-navbar-brand-padding-y: 0rem !important;
@@ -160,6 +160,15 @@ i.fa-sharp.fa-solid.fa-pencil.fa-2xl.align-items-end.icon3{
   padding-top: 0% !important;
 }
 i.fa-sharp.fa-solid.fa-pencil.fa-2xl.align-items-end.icon3:hover{
+  color: rgb(118, 190, 23) !important;
+}
+i.fa-sharp.fa-solid.fa-pencil.fa-2xl.icon6{
+  color: #fff !important;
+  padding-top: 0% !important;
+  padding-left: 67% !important;
+  //float: right !important;
+}
+i.fa-sharp.fa-solid.fa-pencil.fa-2xl.icon6:hover{
   color: rgb(118, 190, 23) !important;
 }
 

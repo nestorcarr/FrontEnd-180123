@@ -37,7 +37,6 @@ import { AcercademiComponent } from './componentes/main/acercademi/acercademi.co
 import { RedesdashComponent } from './componentes/dash/redesdash/redesdash.component';
 import { CarouseldashComponent } from './componentes/dash/carouseldash/carouseldash.component';
 import { AcercademidashComponent } from './componentes/dash/acercademidash/acercademidash.component';
-import { EdicionmasComponent } from './componentes/dash/edicion/edicionmas/edicionmas.component';
 import { LaboraldashComponent } from './componentes/dash/laboraldash/laboraldash.component';
 import { EducaciondashComponent } from './componentes/dash/educaciondash/educaciondash.component';
 import { HabilidaddashComponent } from './componentes/dash/habilidaddash/habilidaddash.component';
@@ -50,10 +49,6 @@ import { ModaldashedicionlabComponent } from './modals/modaldashedicionlab/modal
 import { ModaldashedicioneducComponent } from './modals/modaldashedicioneduc/modaldashedicioneduc.component';
 import { ModaldashedicionhabComponent } from './modals/modaldashedicionhab/modaldashedicionhab.component';
 import { ModaldashedicionproyComponent } from './modals/modaldashedicionproy/modaldashedicionproy.component';
-import { EdicionmaslabComponent } from './componentes/dash/edicion/edicionmaslab/edicionmaslab.component';
-import { EdicionmaseducComponent } from './componentes/dash/edicion/edicionmaseduc/edicionmaseduc.component';
-import { EdicionmashabComponent } from './componentes/dash/edicion/edicionmashab/edicionmashab.component';
-import { EdicionmasproyComponent } from './componentes/dash/edicion/edicionmasproy/edicionmasproy.component';
 import { ModalnavbardashComponent } from './modals/modalnavbardash/modalnavbardash.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ModalfooterComponent } from './modals/modalfooter/modalfooter.component';
@@ -88,7 +83,6 @@ import { ModaldashmasproyComponent } from './modals/modaldashmasproy/modaldashma
     RedesdashComponent,
     CarouseldashComponent,
     AcercademidashComponent,
-    EdicionmasComponent,
     LaboraldashComponent,
     EducaciondashComponent,
     HabilidaddashComponent,
@@ -101,10 +95,6 @@ import { ModaldashmasproyComponent } from './modals/modaldashmasproy/modaldashma
     ModaldashedicioneducComponent,
     ModaldashedicionhabComponent,
     ModaldashedicionproyComponent,
-    EdicionmaslabComponent,
-    EdicionmaseducComponent,
-    EdicionmashabComponent,
-    EdicionmasproyComponent,
     ModalnavbardashComponent,
     ModalfooterComponent,
     ModaldashmaspersComponent,
