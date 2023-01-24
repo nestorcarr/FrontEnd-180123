@@ -1,15 +1,25 @@
 <header>
-  <nav class="navbar navbar-expand-lg navbar-light bg-primary fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+    <!--fixed-top-->
     <div class="container">
       <div class="row">
-        <div class="col-lg-3 navb"><!--col-md-6 col-sm-12-->
-          <a class="navbar-brand" href="https://argentinaprograma.inti.gob.ar">
-            <img src="{{ logoargentinaprograma }}" alt="Logo de Argentina Programa" class="logos">
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          <a
+            class="navbar-brand"
+            href="https://argentinaprograma.inti.gob.ar/"
+            rel="noopener"
+            target="_blank"
+          >
+            <img
+              src="{{ logoargentinaprograma }}"
+              alt="Logo de Argentina Programa"
+              class="logos"
+            />
           </a>
         </div>
-        <div class="col-lg-5 col-md-6 col-sm-12 text-start pe-5 pt-3 cody"><!--col-md-6 col-sm-12-->
-          <div class="home">
-            <span>
+      <div class="col-lg-5 col-md-6 col-sm-12 text-start pe-5 pt-3 cody">
+          <div class="navbar-nav home">
+            <span class="nav-item">
               <div class="stage">
                 <div class="cubespinner">
                   <div class="face1">Full Stack Jr</div>
@@ -20,7 +30,7 @@
             </span>
           </div>
         </div>
-        <div class="col-lg-4 text-center py-3 col-md-12 redes" id="navbarNav1"><!--col-md-12-->
+        <div class="col-lg-4 col-md-12 text-center mt-2" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
               <app-redes></app-redes>
@@ -33,40 +43,6 @@
   <!-- Modal -->
   <app-modal-navbar></app-modal-navbar>
 </header>
-
-<!--<header>
-  <nav class="navbar navbar-expand-lg bg-primary fixed-top">--><!--fixed-top-->
-   <!-- <div class="container-fluid">
-      <div class="col-lg-3 col-md-12">
-        <a class="navbar-brand" href="https://argentinaprograma.inti.gob.ar" rel="noopener" target="_blank">-->
-          <!-- <a class="navbar-brand" [routerLink]="['https://argentinaprograma.inti.gob.ar']" rel="noopener" target="_blank">-->
-          <!-- <a class="navbar-brand" [routerLink]="['{{ enlace }}']" title="&" rel="noopener" target="_blank">-->
-         <!--<img src="{{ logoargentinaprograma }}" alt="Logo de Argentina Programa" class="logos">-->
-          <!--<img src="assets/image/APLogo-20-20.png" alt="Logo de Argentina Programa" class="logo">-->
-      <!--  </a>
-      </div>
-      <div class="col-lg-5 col-md-12 text-start pe-5 cody">
-        <div class="home">
-          <span>
-            <div class="stage">
-              <div class="cubespinner">
-                <div class="face1">Full Stack Jr</div>
-                <div class="face2">Proyecto Integrador</div>
-                <div class="face3">Argentina Programa</div>
-              </div>
-            </div>
-          </span>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-12">
-        <app-redes></app-redes>
-      </div>
-    </div>
-
-  </nav>-->
-  <!-- Modal -->
-  <!--<app-modal-navbar></app-modal-navbar>
-</header>-->
 
 <!--
 <header>

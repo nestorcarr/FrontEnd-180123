@@ -46,24 +46,14 @@ h2{
   background-size: contain;
 }*/
 
-@media only screen and (max-width: 768px) {
-  /* For mobile phones: */
-  /*[class*="col-"] {
-    width: 100%;
-    height: 65px !important;
-    font-size:7px;
-    text-align: center;
-    //display: flex;
-  };*/
 
-}
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
 /* For mobile phones: */
 .rounded-circle.posImag{
  /*margin-top: -54%;*/
   /*border-radius: 100%;*/
-  width: 70% !important;
+  width: 75% !important;
  /* margin-bottom: 2%;*/
  /* background-image: url('//src/assets/image/1.jpg');
   background-repeat: no-repeat;
@@ -75,24 +65,5 @@ h2{
 }
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (max-width: 400px) {
 
-}
-
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (max-width: 768px) {
-
-}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (max-width: 992px) {
-
-}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-
-}
 

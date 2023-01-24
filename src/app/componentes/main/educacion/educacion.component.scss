@@ -28,3 +28,9 @@ h2{
   .col-4.pos_izq{
     padding-left: 4% !important;
   }
+  @media only screen and (max-width: 600px) {
+    /* For mobile phones: */
+    .tam_imag{
+      width: 75%;
+    }
+  }

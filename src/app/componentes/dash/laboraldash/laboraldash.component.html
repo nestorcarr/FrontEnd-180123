@@ -15,8 +15,8 @@
       </div>
       <h3 class="mt-2">{{ laboral.empresa }}</h3>
       <h5>{{ laboral.cargo }}</h5>
-      <h4>{{ laboral.inicio }}</h4>
-      <h4>{{ laboral.finalizacion }}</h4>
+      <h4>{{ laboral.inicio | date:"dd-MM-yyyy"}}</h4>
+      <h4>{{ laboral.finalizacion | date:"dd-MM-yyyy"}}</h4>
   </div>
 
 
@@ -26,7 +26,7 @@
               <p>{{ laboral.tareas}}</p>
           </blockquote>
           <figcaption class="blockquote-footer">
-            Someone famous in <cite class="figcap" title="Source Title">Source Title</cite>
+            <cite class="figcap" title="Source Title"></cite>
           </figcaption>
       </figure>
       <!--<hr>-->

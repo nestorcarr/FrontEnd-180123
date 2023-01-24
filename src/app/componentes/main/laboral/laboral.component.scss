@@ -16,7 +16,7 @@ h2{
   margin-left: 0% !important;
   margin-right: 0% !important;
   padding: 0% !important;
-  font-size: 1.125rem !important;
+  font-size: 1.2rem !important;
 }
 .tam_imag2{
   width: 11rem;
@@ -32,10 +32,10 @@ h2{
 .blockquote-footer{
   font-family: cursive !important;
 }
-.blockquote1{
-  color: #fff;
-  margin-left: 0% !important;
-  margin-right: 0% !important;
-  padding: 0% !important;
-  font-size: 1.125rem !important;
+
+@media only screen and (max-width: 600px) {
+  /* For mobile phones: */
+  .tam_imag2{
+    width: 7rem;
+  }
 }

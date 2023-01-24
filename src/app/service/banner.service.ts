@@ -9,8 +9,8 @@ import { Banner } from '../model/banner';
 })
 export class BannerService {
   //url = "http://localhost:8080/banner/";
-  url = environment.URL + 'banner/';
-  //url = 'https://argprograma-backend.onrender.com/banner/';
+  //url = environment.URL + 'banner/';
+  url = 'https://argprograma-backend.onrender.com/banner/';
 
   constructor(private httpClient: HttpClient) { }
 

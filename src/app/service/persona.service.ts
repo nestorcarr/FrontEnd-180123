@@ -10,8 +10,8 @@ import { Persona } from '../model/persona';
 export class PersonaService {
 
   //url = "http://localhost:8080/persona/";
-  url = environment.URL + 'persona/';
-  //url = 'https://argprograma-backend.onrender.com/persona/';
+  //url = environment.URL + 'persona/';
+  url = 'https://argprograma-backend.onrender.com/persona/';
 
   constructor(private httpClient: HttpClient) { }
 

@@ -1,0 +1,11 @@
+.pos_izq{
+  padding-left: 0% !important;
+}
+
+@media only screen and (max-width: 600px) {
+    /* For mobile phones: */
+    .tam_imag2{
+      width: 7rem;
+    }
+ 
+  }

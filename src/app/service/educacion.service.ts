@@ -9,8 +9,8 @@ import { Educacion } from '../model/educacion';
 })
 export class EducacionService {
   //url = "http://localhost:8080/educacion/";
-  url = environment.URL + 'educacion/';
-  //url = 'https://argprograma-backend.onrender.com/educacion/';
+  //url = environment.URL + 'educacion/';
+  url = 'https://argprograma-backend.onrender.com/educacion/';
 
   constructor(private httpClient: HttpClient) { }
 

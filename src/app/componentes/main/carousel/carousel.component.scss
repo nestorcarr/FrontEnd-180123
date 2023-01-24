@@ -1,6 +1,5 @@
 .banner{
   border-radius: 1rem !important;
-
 }
 
 .capa0{
@@ -28,7 +27,7 @@
   opacity: .5;
   transition: opacity .15s ease;
 }
-@media only screen and (max-width: 768px) {
+//@media only screen and (max-width: 768px) {
   /* For mobile phones: */
   /*[class*="col-"] {
     width: 100%;
@@ -38,37 +37,57 @@
     //display: flex;
   };*/
 
-}
+//}
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
+//@media only screen and (max-width: 600px) {
 /* For mobile phones: */
-.banner{
-  margin-top: 200px;
-}
-}
+
+//}
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (max-width: 400px) {
-  .banner{
-    margin-top: 200px;
-  }
-}
+/*@media only screen and (max-width: 400px) {
+  
+}*/
 
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (max-width: 768px) {
-
-}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (max-width: 992px) {
+/*@media only screen and (max-width: 768px) {
   .banner{
-    margin-top: 150px;
+    margin-top: 4450px;
   }
 }
+@media only screen and (min-width: 768px) {
+  .banner{
+    margin-top: 180px;
+  }
+}*/
+
+/* Large devices (laptops/desktops, 992px and up) */
+/*@media only screen and (max-width: 992px) {
+  .banner{
+    margin-top: 180px;
+  }
+}*/
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+/*@media only screen and (max-width: 1200px) {
+  .banner{
+  
+  }
+}*/
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
+/*@media only screen and (min-width: 992px) {
+  .banner{
+   margin-top: 50px;
+  }
+}*/
 
-}
+
+
+
+
+
+
+
+
 

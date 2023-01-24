@@ -9,8 +9,8 @@ import { Habilidad } from '../model/habilidad';
 })
 export class HabilidadService {
   //url = "http://localhost:8080/habilidad/";
-  url = environment.URL + 'habilidad/';
-  //url = 'https://argprograma-backend.onrender.com/habilidad/';
+  //url = environment.URL + 'habilidad/';
+  url = 'https://argprograma-backend.onrender.com/habilidad/';
 
   constructor(private httpClient: HttpClient) { }
 

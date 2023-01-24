@@ -9,8 +9,8 @@ import { Laboral } from '../model/laboral';
 })
 export class LaboralService {
   //url = "http://localhost:8080/laboral/";
-  url = environment.URL + 'laboral/';
-  //url = 'https://argprograma-backend.onrender.com/laboral/';
+  //url = environment.URL + 'laboral/';
+  url = 'https://argprograma-backend.onrender.com/laboral/';
 
   constructor(private httpClient: HttpClient) { }
 
